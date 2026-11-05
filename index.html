@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dave Collins — Senior PMO &amp; QA Leader</title>
+  <meta name="description" content="Dave Collins is a senior PMO and QA leader in game production and software operations. Resume, shipped titles, and introduction.">
+  <meta name="author" content="Dave Collins">
+  <meta name="theme-color" content="#0c0f14">
+  <link rel="canonical" href="https://applieddave.github.io/">
+  <meta property="og:title" content="Dave Collins — Senior PMO &amp; QA Leader">
+  <meta property="og:description" content="Game production, QA leadership, and software operations. Introduction and resume.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://applieddave.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;1,9..144,460&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dave Collins",
+    "jobTitle": "Senior PMO & QA Leader",
+    "email": "mailto:wildshroom@me.com",
+    "telephone": "+1-727-304-4353",
+    "url": "https://applieddave.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/collinsdavew",
+      "https://github.com/AppliedDave",
+      "https://github.com/CollectiveDave"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0c0f14;
+      --card: #151a22;
+      --ink: #eef1f6;
+      --muted: #9aa3b2;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #8ee0c8;
+      --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+      --serif: "Fraunces", Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(142, 224, 200, 0.08), transparent 60%),
+        var(--bg);
+      font-family: var(--sans);
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color-scheme: dark;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #fff; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .top {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.4rem 1.25rem 0;
+    }
+    .icon-rail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding: 0.2rem 0 0.85rem;
+    }
+    .sprite { display: block; width: 34px; height: 34px; }
+    .sprite-wide { width: 68px; height: 28px; }
+    .section-title .sprite { width: 22px; height: 22px; }
+    .section-title .sprite-wide { width: 44px; height: 18px; }
+    .pac-row { display: flex; align-items: center; gap: 5px; height: 34px; }
+    .pellet {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #ffe14a;
+    }
+    .chomp {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: #ffe14a;
+      clip-path: polygon(0 0, 100% 0, 100% 36%, 54% 50%, 100% 64%, 100% 100%, 0 100%);
+      animation: bite 0.45s steps(2, end) infinite;
+    }
+    @keyframes bite { to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+
+    .marquee {
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: tick 80s linear infinite;
+    }
+    .marquee-track span {
+      padding: 0.55rem 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    @keyframes tick {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+      gap: 1.25rem;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 3rem;
+    }
+    .identity {
+      position: sticky;
+      top: 1rem;
+      align-self: start;
+      min-width: 0;
+      padding: 1.35rem 1.2rem 1.2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .eyebrow {
+      margin: 0 0 0.55rem;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .identity h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 560;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .role { margin: 0.45rem 0 0; color: var(--muted); font-weight: 300; }
+    .contact {
+      list-style: none;
+      margin: 1.1rem 0 0;
+      padding: 1rem 0 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0.35rem;
+    }
+    .contact a {
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+    .contact a:hover { color: var(--accent); }
+    nav ul {
+      list-style: none;
+      margin: 1rem 0 1.15rem;
+      padding: 0;
+      display: grid;
+      gap: 0.2rem;
+    }
+    nav a { color: var(--muted); font-size: 0.95rem; }
+    nav a:hover { color: var(--ink); }
+    .download {
+      display: block;
+      text-align: center;
+      padding: 0.7rem 0.8rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #10211c;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .download:hover { color: #10211c; filter: brightness(1.06); }
+
+    main {
+      padding: 1.6rem 1.6rem 2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .kicker {
+      margin: 0 0 0.45rem;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .letter h2 {
+      margin: 0 0 1rem;
+      font-family: var(--serif);
+      font-weight: 460;
+      font-style: italic;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .letter p { margin: 0 0 0.9rem; max-width: 42rem; color: #d5dbe6; }
+    .signoff { margin-top: 1.2rem; font-family: var(--serif); font-style: italic; font-size: 1.25rem; }
+    .signoff p { margin: 0; color: var(--ink); }
+
+    section { margin-top: 2.4rem; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 0 0 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .section-title .sprite { height: 22px; }
+    .summary { margin: 0; max-width: 46rem; color: #d5dbe6; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .chips li {
+      padding: 0.28rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.92rem;
+      color: #dce3ee;
+    }
+
+    .job { padding: 1rem 0 1.05rem; border-bottom: 1px solid var(--line); }
+    .job:first-of-type { padding-top: 0.15rem; }
+    .job header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .job h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 560;
+      letter-spacing: -0.02em;
+    }
+    .job .meta { margin: 0.1rem 0 0; color: var(--muted); }
+    .job .dates { margin: 0; color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+    .job ul { margin: 0.55rem 0 0; padding: 0 0 0 1.1rem; color: #d5dbe6; }
+    .job li { margin: 0.28rem 0; }
+    .job li::marker { color: var(--accent); }
+
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .edu h3, .certs h3 {
+      margin: 0 0 0.15rem;
+      font-size: 1.02rem;
+      font-weight: 560;
+    }
+    .edu p { margin: 0 0 0.85rem; color: var(--muted); }
+
+    .scoreboard { list-style: none; margin: 0; padding: 0; counter-reset: rank; }
+    .scoreboard li {
+      counter-increment: rank;
+      display: flex;
+      gap: 0.85rem;
+      align-items: baseline;
+      padding: 0.42rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .scoreboard li > span:first-of-type { flex: 1; }
+    .scoreboard li::before {
+      content: counter(rank, decimal-leading-zero);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+      min-width: 1.6rem;
+    }
+    .scoreboard .tag {
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    footer { margin-top: 2.2rem; color: var(--muted); font-size: 0.88rem; }
+
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .identity { position: relative; top: 0; }
+      .split { grid-template-columns: 1fr; gap: 0.4rem; }
+      .job header { flex-direction: column; gap: 0.1rem; }
+      .scoreboard .tag { display: none; }
+      main { padding: 1.2rem 1rem 1.6rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+    }
+    @media print {
+      body { background: white; color: black; }
+      .top, nav, .download { display: none !important; }
+      .layout { display: block; }
+      .identity, main { background: white; border: none; color: black; }
+      a { color: black; }
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="i-defender" viewBox="0 0 56 24">
+      <rect x="2" y="18" width="3" height="6" fill="#14564f"/>
+      <rect x="7" y="15" width="4" height="9" fill="#3dffe8"/>
+      <rect x="13" y="17" width="3" height="7" fill="#14564f"/>
+      <rect x="18" y="14" width="5" height="10" fill="#3dffe8"/>
+      <rect x="4" y="11" width="26" height="4" fill="#f4f7ff"/>
+      <rect x="24" y="8" width="8" height="10" fill="#f4f7ff"/>
+      <rect x="30" y="9" width="7" height="8" fill="#ff3b55"/>
+      <polygon points="36,13 52,9 52,17" fill="#9be7ff"/>
+      <rect x="10" y="9" width="10" height="2" fill="#3dffe8"/>
+      <rect x="44" y="18" width="2" height="3" fill="#fff"/>
+      <rect x="43" y="21" width="4" height="1" fill="#ff3b55"/>
+    </symbol>
+    <symbol id="i-galaga" viewBox="0 0 32 32">
+      <rect x="7" y="3" width="2" height="6" fill="#ff3b55"/>
+      <rect x="23" y="3" width="2" height="6" fill="#ff3b55"/>
+      <rect x="6" y="2" width="4" height="2" fill="#ffe14a"/>
+      <rect x="22" y="2" width="4" height="2" fill="#ffe14a"/>
+      <rect x="2" y="12" width="8" height="10" fill="#3d6bff"/>
+      <rect x="22" y="12" width="8" height="10" fill="#3d6bff"/>
+      <rect x="4" y="10" width="4" height="4" fill="#7aa2ff"/>
+      <rect x="24" y="10" width="4" height="4" fill="#7aa2ff"/>
+      <rect x="10" y="8" width="12" height="16" fill="#ffe14a"/>
+      <rect x="12" y="12" width="3" height="3" fill="#14120a"/>
+      <rect x="17" y="12" width="3" height="3" fill="#14120a"/>
+      <rect x="13" y="20" width="6" height="2" fill="#ff3b55"/>
+      <rect x="12" y="24" width="2" height="4" fill="#ffe14a"/>
+      <rect x="18" y="24" width="2" height="4" fill="#ffe14a"/>
+    </symbol>
+    <symbol id="i-asteroids" viewBox="0 0 32 32">
+      <polygon points="16,2 21,16 16,13 11,16" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+      <polygon points="23,5 31,9 29,18 22,15 21,8" fill="none" stroke="#9be7ff" stroke-width="1.3"/>
+      <polygon points="2,18 10,15 13,25 5,30 1,23" fill="none" stroke="#ffe14a" stroke-width="1.3"/>
+    </symbol>
+    <symbol id="i-invader" viewBox="0 0 24 16">
+      <g fill="#39ff6a">
+        <rect x="4" y="0" width="2" height="2"/><rect x="18" y="0" width="2" height="2"/>
+        <rect x="6" y="2" width="2" height="2"/><rect x="16" y="2" width="2" height="2"/>
+        <rect x="4" y="4" width="16" height="2"/>
+        <rect x="2" y="6" width="2" height="2"/><rect x="6" y="6" width="4" height="2"/><rect x="14" y="6" width="4" height="2"/><rect x="20" y="6" width="2" height="2"/>
+        <rect x="0" y="8" width="24" height="2"/>
+        <rect x="0" y="10" width="2" height="2"/><rect x="4" y="10" width="6" height="2"/><rect x="14" y="10" width="6" height="2"/><rect x="22" y="10" width="2" height="2"/>
+        <rect x="0" y="12" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="18" y="12" width="2" height="2"/><rect x="22" y="12" width="2" height="2"/>
+        <rect x="6" y="14" width="4" height="2"/><rect x="14" y="14" width="4" height="2"/>
+      </g>
+    </symbol>
+    <symbol id="i-mario" viewBox="0 0 16 16">
+      <rect x="4" y="1" width="8" height="2" fill="#e52521"/>
+      <rect x="3" y="3" width="10" height="1" fill="#e52521"/>
+      <rect x="4" y="4" width="8" height="3" fill="#f8c9a0"/>
+      <rect x="5" y="5" width="1" height="1" fill="#1a1a1a"/>
+      <rect x="9" y="5" width="1" height="1" fill="#1a1a1a"/>
+      <rect x="5" y="7" width="6" height="1" fill="#5a3418"/>
+      <rect x="3" y="8" width="2" height="3" fill="#e52521"/>
+      <rect x="11" y="8" width="2" height="3" fill="#e52521"/>
+      <rect x="5" y="8" width="6" height="1" fill="#e52521"/>
+      <rect x="5" y="9" width="6" height="3" fill="#2d4bff"/>
+      <rect x="6" y="9" width="1" height="1" fill="#f8d34a"/>
+      <rect x="9" y="9" width="1" height="1" fill="#f8d34a"/>
+      <rect x="5" y="12" width="2" height="2" fill="#2d4bff"/>
+      <rect x="9" y="12" width="2" height="2" fill="#2d4bff"/>
+      <rect x="4" y="14" width="3" height="1" fill="#6b3a1f"/>
+      <rect x="9" y="14" width="3" height="1" fill="#6b3a1f"/>
+    </symbol>
+    <symbol id="i-dk" viewBox="0 0 32 32">
+      <rect x="0" y="27" width="32" height="4" fill="#e23b3b"/>
+      <rect x="3" y="28" width="2" height="2" fill="#ffd36a"/>
+      <rect x="15" y="28" width="2" height="2" fill="#ffd36a"/>
+      <rect x="26" y="28" width="2" height="2" fill="#ffd36a"/>
+      <rect x="19" y="13" width="10" height="14" fill="#d4843a"/>
+      <rect x="19" y="16" width="10" height="2" fill="#6a3412"/>
+      <rect x="19" y="22" width="10" height="2" fill="#6a3412"/>
+      <rect x="3" y="8" width="12" height="10" fill="#8a4b24"/>
+      <rect x="1" y="10" width="3" height="6" fill="#8a4b24"/>
+      <rect x="14" y="6" width="4" height="6" fill="#e0b07a"/>
+      <rect x="15" y="8" width="1" height="1" fill="#1a120c"/>
+      <rect x="6" y="12" width="3" height="3" fill="#e23b3b"/>
+      <rect x="5" y="18" width="3" height="9" fill="#8a4b24"/>
+      <rect x="10" y="18" width="3" height="9" fill="#8a4b24"/>
+    </symbol>
+    <symbol id="i-punch" viewBox="0 0 36 24">
+      <rect x="0" y="8" width="8" height="5" fill="#f4f4f4"/>
+      <rect x="6" y="4" width="10" height="12" fill="#ff3b4e"/>
+      <rect x="12" y="6" width="4" height="8" fill="#ff6b78"/>
+      <rect x="28" y="8" width="8" height="5" fill="#f4f4f4"/>
+      <rect x="20" y="4" width="10" height="12" fill="#ff3b4e"/>
+      <rect x="20" y="6" width="4" height="8" fill="#ff6b78"/>
+      <rect x="17" y="9" width="2" height="2" fill="#ffe14a"/>
+      <rect x="16" y="11" width="2" height="2" fill="#ffe14a"/>
+      <rect x="18" y="11" width="2" height="2" fill="#ffe14a"/>
+    </symbol>
+    <symbol id="i-tempest" viewBox="0 0 32 32">
+      <polygon points="2,2 30,2 24,10 8,10" fill="none" stroke="#ff2bd6" stroke-width="1.4"/>
+      <polygon points="8,10 24,10 20,18 12,18" fill="none" stroke="#3dffe8" stroke-width="1.4"/>
+      <polygon points="12,18 20,18 17,24 15,24" fill="none" stroke="#ffe14a" stroke-width="1.4"/>
+      <rect x="15" y="22" width="2" height="8" fill="#ffffff"/>
+    </symbol>
+  </svg>
+
+  <header class="top">
+    <div class="icon-rail" aria-hidden="true">
+      <svg class="sprite sprite-wide" viewBox="0 0 56 24"><use href="#i-defender"/></svg>
+      <svg class="sprite" viewBox="0 0 32 32"><use href="#i-galaga"/></svg>
+      <div class="pac-row"><span class="chomp"></span><span class="pellet"></span><span class="pellet"></span></div>
+      <svg class="sprite" viewBox="0 0 32 32"><use href="#i-asteroids"/></svg>
+      <svg class="sprite" viewBox="0 0 24 16" width="40" height="26"><use href="#i-invader"/></svg>
+      <svg class="sprite" viewBox="0 0 16 16" width="32" height="32"><use href="#i-mario"/></svg>
+      <svg class="sprite" viewBox="0 0 32 32"><use href="#i-dk"/></svg>
+      <svg class="sprite sprite-wide" viewBox="0 0 36 24"><use href="#i-punch"/></svg>
+      <svg class="sprite" viewBox="0 0 32 32"><use href="#i-tempest"/></svg>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Magic: The Gathering Arena&nbsp;&nbsp;·&nbsp;&nbsp;EVE Online&nbsp;&nbsp;·&nbsp;&nbsp;Half-Life&nbsp;&nbsp;·&nbsp;&nbsp;Age of Empires&nbsp;&nbsp;·&nbsp;&nbsp;Empire Earth&nbsp;&nbsp;·&nbsp;&nbsp;Tribes 2&nbsp;&nbsp;·&nbsp;&nbsp;Crimson Skies&nbsp;&nbsp;·&nbsp;&nbsp;Midtown Madness&nbsp;&nbsp;·&nbsp;&nbsp;MechCommander&nbsp;&nbsp;·&nbsp;&nbsp;Flight Simulator&nbsp;&nbsp;·&nbsp;&nbsp;Arcanum&nbsp;&nbsp;·&nbsp;&nbsp;Kingdoms of Camelot&nbsp;&nbsp;·&nbsp;&nbsp;War Commander&nbsp;&nbsp;·&nbsp;&nbsp;Battle Pirates&nbsp;&nbsp;·&nbsp;&nbsp;Two Dots&nbsp;&nbsp;·&nbsp;&nbsp;Garden Tails&nbsp;&nbsp;·&nbsp;&nbsp;Fashion &amp; Fame&nbsp;&nbsp;·&nbsp;&nbsp;Dragon Conquest&nbsp;&nbsp;·&nbsp;&nbsp;Rife and Ruin&nbsp;&nbsp;·&nbsp;&nbsp;Paragon of Blightborn&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+        <span>Magic: The Gathering Arena&nbsp;&nbsp;·&nbsp;&nbsp;EVE Online&nbsp;&nbsp;·&nbsp;&nbsp;Half-Life&nbsp;&nbsp;·&nbsp;&nbsp;Age of Empires&nbsp;&nbsp;·&nbsp;&nbsp;Empire Earth&nbsp;&nbsp;·&nbsp;&nbsp;Tribes 2&nbsp;&nbsp;·&nbsp;&nbsp;Crimson Skies&nbsp;&nbsp;·&nbsp;&nbsp;Midtown Madness&nbsp;&nbsp;·&nbsp;&nbsp;MechCommander&nbsp;&nbsp;·&nbsp;&nbsp;Flight Simulator&nbsp;&nbsp;·&nbsp;&nbsp;Arcanum&nbsp;&nbsp;·&nbsp;&nbsp;Kingdoms of Camelot&nbsp;&nbsp;·&nbsp;&nbsp;War Commander&nbsp;&nbsp;·&nbsp;&nbsp;Battle Pirates&nbsp;&nbsp;·&nbsp;&nbsp;Two Dots&nbsp;&nbsp;·&nbsp;&nbsp;Garden Tails&nbsp;&nbsp;·&nbsp;&nbsp;Fashion &amp; Fame&nbsp;&nbsp;·&nbsp;&nbsp;Dragon Conquest&nbsp;&nbsp;·&nbsp;&nbsp;Rife and Ruin&nbsp;&nbsp;·&nbsp;&nbsp;Paragon of Blightborn&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="identity">
+      <div>
+        <p class="eyebrow">Game production</p>
+        <h1>Dave Collins</h1>
+        <p class="role">Senior PMO &amp; QA Leader</p>
+      </div>
+      <ul class="contact">
+        <li><a href="mailto:wildshroom@me.com">wildshroom@me.com</a></li>
+        <li><a href="tel:+17273044353">727-304-4353</a></li>
+        <li><a href="https://www.linkedin.com/in/collinsdavew">linkedin.com/in/collinsdavew</a></li>
+        <li><a href="https://github.com/AppliedDave">github.com/AppliedDave</a></li>
+      </ul>
+      <nav aria-label="Page">
+        <ul>
+          <li><a href="#letter">Introduction</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#titles">Titles shipped</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ul>
+      </nav>
+      <a class="download" href="Dave_Collins_Resume.pdf">Download résumé</a>
+    </aside>
+
+    <main>
+      <section class="letter" id="letter" aria-labelledby="letter-heading">
+        <p class="kicker">Introduction</p>
+        <h2 id="letter-heading">Gaming has been part of my life for over four decades, across just about every genre and platform.</h2>
+        <p>My relationship with games goes well beyond playing them. I started working on games from home in 1994, contributing to Usurper, a DOS-based BBS game. That early experience eventually grew into a career spanning decades in game development, production, QA, and product leadership.</p>
+        <p>I'm very familiar with the gaming industry, its communities, competitive environments, and the design decisions that keep players engaged. My familiarity with League of Legends comes from understanding the MOBA genre, its mechanics, competitive ecosystem, and player culture. While my professional experience spans a broad range of games, I appreciate what makes League a lasting and influential part of the industry.</p>
+        <p>You can see more work contributions here:</p>
+        <p>
+          <a href="https://github.com/AppliedDave">github.com/AppliedDave</a><br>
+          <a href="https://github.com/CollectiveDave">github.com/CollectiveDave</a>
+        </p>
+        <p>A GitHub profile: <a href="https://applieddave.github.io/">applieddave.github.io</a></p>
+        <div class="signoff">
+          <p>Best regards,</p>
+          <p>Dave</p>
+        </div>
+      </section>
+
+      <section id="summary">
+        <h2 class="section-title"><svg class="sprite" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-asteroids"/></svg> Professional summary</h2>
+        <p class="summary">What distinguishes me is not having managed projects; it is that I have consistently improved delivery systems that did not work, decreased waste, improved predictability, and created scalable business decisions. Decreased defect leakage rates, increased release predictability, shorter lead times for feature releases, reduced infrastructure expenses, and installation of production tools. I have contributed to and led a multitude of shipped projects.</p>
+      </section>
+
+      <section id="competencies">
+        <h2 class="section-title"><svg class="sprite" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-galaga"/></svg> Core competencies</h2>
+        <ul class="chips">
+          <li>Agile / Waterfall / Hybrid</li>
+          <li>Project budgets and profitability</li>
+          <li>Large-scale project delivery</li>
+          <li>Live operations and game production</li>
+          <li>Quality assurance leadership</li>
+          <li>UI/UX team production support</li>
+          <li>PC, console, and mobile</li>
+          <li>CI/CD and DevOps collaboration</li>
+          <li>AI-driven workflow automation</li>
+          <li>Stakeholder and executive communication</li>
+          <li>Vendor management</li>
+          <li>Risk management and mitigation</li>
+          <li>Budgeting and financial oversight</li>
+          <li>Change management</li>
+          <li>Reporting metrics and capacity planning</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title"><svg class="sprite sprite-wide" viewBox="0 0 56 24" aria-hidden="true"><use href="#i-defender"/></svg> Experience</h2>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Head of Product Development</h3>
+              <p class="meta">Applied Game Designs · Remote</p>
+            </div>
+            <p class="dates">Jan 2025 – Present</p>
+          </header>
+          <ul>
+            <li>Product vision and production strategy for multiple Unity-based live service mobile titles simultaneously across design, engineering, QA, and UI/UX. Coordinating daily with discipline-specific producers and leads within a cross-functional team environment.</li>
+            <li>Led the overall QA strategy and designed the test automation architecture.</li>
+            <li>Actively embedded with the UI/UX team to drive feature scope, feedback loops, and sprint deliverables, ensuring design intent is translated cleanly into shippable builds.</li>
+            <li>Define scope, deliverables, success metrics, and timelines; drive risk identification and mitigation strategies to maintain delivery predictability across distributed teams.</li>
+            <li>Define feature roadmaps, monetization frameworks, and sprint cadences; reduce cross-team rework via structured intake and dependency mapping.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Lead Producer</h3>
+              <p class="meta">Marauder Tech · Remote</p>
+            </div>
+            <p class="dates">Mar 2024 – Jan 2025</p>
+          </header>
+          <ul>
+            <li>Managed multiple concurrent projects with cross-functional teams within a broader multi-studio organization; deployed Jira, Confluence, Jenkins, and TestRail in under 60 days.</li>
+            <li>Defined automated QA efforts while establishing the framework and architecture for automated testing.</li>
+            <li>Developed detailed project plans including milestones, schedules, and dependencies; coordinated production across shared engineering and UI/UX resources alongside a wider producer team.</li>
+            <li>Improved sprint delivery predictability through capacity planning, Agile best practices, and a consolidated stakeholder reporting dashboard.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>QA Manager</h3>
+              <p class="meta">Intrepid Studios · Remote</p>
+            </div>
+            <p class="dates">Oct 2023 – Mar 2024</p>
+          </header>
+          <ul>
+            <li>Built and mentored a QA org embedded within a large-scale PC MMO production (200+ person team); reduced critical-defect escape rate via triage and regression systems.</li>
+            <li>Integrated QA directly into production pipelines for scalable release readiness; partnered with UI/UX leads to validate interface builds against accessibility and usability standards.</li>
+            <li>Oversaw risk-based testing strategies integrated into Agile workflows; managed team capacity planning and delivery timelines to ensure milestone stability.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Technical Producer</h3>
+              <p class="meta">Two Dots · Take-Two Interactive</p>
+            </div>
+            <p class="dates">Nov 2021 – May 2023</p>
+          </header>
+          <ul>
+            <li>Operated as part of a structured producer team within a large studio environment (100+ staff org); directed end-to-end delivery of high-visibility features for live mobile titles.</li>
+            <li>Coordinated cross-functional stakeholders across engineering, UI/UX, art, and product teams; managed roadmap planning, risk mitigation, and post-launch reviews.</li>
+            <li>Introduced capacity planning via Jira that lifted on-time sprint completion; reduced AWS infrastructure costs through observability tooling and resource right-sizing.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Technical Project Manager</h3>
+              <p class="meta">Spirion</p>
+            </div>
+            <p class="dates">Apr 2020 – Oct 2021</p>
+          </header>
+          <ul>
+            <li>Led enterprise SaaS project delivery with strict compliance and uptime requirements; owned project scope, budgeting, and resource allocation across multiple concurrent client engagements.</li>
+            <li>Facilitated stakeholder communication across technical and executive teams; aligned engineering execution with regulatory and business requirements through structured feature intake and backlog management.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Head of Quality Assurance</h3>
+              <p class="meta">Wizards of the Coast</p>
+            </div>
+            <p class="dates">Oct 2019 – Mar 2020</p>
+          </header>
+          <ul>
+            <li>Overhauled QA operations across Magic: The Gathering Arena — a large-scale PC and mobile title (200+ person team) — within a multi-producer production structure.</li>
+            <li>Streamlined validation workflows, eliminating $1.8M in operational inefficiencies through process redesign and team restructuring.</li>
+            <li>Resolved long-standing certification blockers with external platform partners, reducing cert cycle time across PC and planned console certification pipelines.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <div>
+              <h3>Senior Product Manager</h3>
+              <p class="meta">Modus Create</p>
+            </div>
+            <p class="dates">Oct 2017 – Oct 2019</p>
+          </header>
+          <ul>
+            <li>Delivered product roadmaps for numerous enterprise clients simultaneously across PC and web platforms; improved forecast accuracy through standardized reporting frameworks and backlog governance.</li>
+            <li>Supported platform migration and porting workstreams for clients moving products across environments, coordinating technical and UX alignment between origin and target platforms.</li>
+            <li>Managed resources, schedules, and roadmaps aligned to business goals; drove risk identification and stakeholder alignment across concurrent engagements.</li>
+          </ul>
+        </article>
+      </section>
+
+      <div class="split">
+        <section id="education" class="edu">
+          <h2 class="section-title"><svg class="sprite" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-tempest"/></svg> Education</h2>
+          <h3>MS Applied Artificial Intelligence</h3>
+          <p>Neumont University · In progress</p>
+          <h3>Bachelor of Science, Computer Science</h3>
+          <p>University of Washington</p>
+        </section>
+        <section id="certifications" class="certs">
+          <h2 class="section-title"><svg class="sprite sprite-wide" viewBox="0 0 36 24" aria-hidden="true"><use href="#i-punch"/></svg> Certifications</h2>
+          <h3>Certified Scrum Master (CSM)</h3>
+          <h3>Certified Scrum Product Owner (CSPO)</h3>
+          <h3>Certified Scrum Professional (CSP)</h3>
+          <h3>PMI-ACP · CAPM</h3>
+          <h3>Atlassian ACP-JSW · AC-JPA</h3>
+        </section>
+      </div>
+
+      <section id="titles">
+        <h2 class="section-title"><svg class="sprite" viewBox="0 0 24 16" aria-hidden="true"><use href="#i-invader"/></svg> Notable titles shipped</h2>
+        <ol class="scoreboard">
+          <li><span>Magic: The Gathering Arena (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>EVE Online (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Half-Life (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Age of Empires (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Empire Earth (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Tribes 2 (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Crimson Skies (PC/Xbox)</span><span class="tag">Shipped</span></li>
+          <li><span>Midtown Madness (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>MechCommander (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Flight Simulator (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Arcanum (PC)</span><span class="tag">Shipped</span></li>
+          <li><span>Kingdoms of Camelot</span><span class="tag">Shipped</span></li>
+          <li><span>War Commander</span><span class="tag">Shipped</span></li>
+          <li><span>Battle Pirates</span><span class="tag">Shipped</span></li>
+          <li><span>Two Dots (Mobile)</span><span class="tag">Shipped</span></li>
+          <li><span>Garden Tails (Mobile)</span><span class="tag">Shipped</span></li>
+          <li><span>Fashion &amp; Fame</span><span class="tag">Shipped</span></li>
+          <li><span>Dragon Conquest</span><span class="tag">Shipped</span></li>
+          <li><span>Rife and Ruin</span><span class="tag">Shipped</span></li>
+          <li><span>Paragon of Blightborn</span><span class="tag">Shipped</span></li>
+        </ol>
+      </section>
+
+      <section id="tools">
+        <h2 class="section-title">
+          <svg class="sprite" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-mario"/></svg>
+          <svg class="sprite" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-dk"/></svg>
+          Tools and technologies
+        </h2>
+        <ul class="chips">
+          <li>AI tooling</li>
+          <li>Unity</li>
+          <li>Unreal</li>
+          <li>Jira (Advanced)</li>
+          <li>Confluence</li>
+          <li>Jenkins / CircleCI / TravisCI</li>
+          <li>Perforce</li>
+          <li>Git</li>
+          <li>TestRail</li>
+          <li>Datadog</li>
+          <li>New Relic</li>
+          <li>Cucumber / Gherkin</li>
+          <li>Rally</li>
+          <li>MS Project</li>
+          <li>C#</li>
+          <li>C++</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Dave Collins · Senior PMO &amp; QA Leader</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
